@@ -1,13 +1,13 @@
 # Maintainer: Jonas Strassel <info@jonas-strassel.de>
 
-pkgname=manjaro-sway-settings-git
+pkgname=manjaro-cdj-settings-git
 pkgver=r1867.e448929a
 pkgrel=1
 arch=('any')
 _pkgbase=desktop-settings
-url="https://github.com/Manjaro-Sway/$_pkgbase"
+url="https://github.com/cdjEeklo/$_pkgbase"
 license=('GPL')
-pkgdesc='Manjaro Sway Settings'
+pkgdesc='Coderdojo Manjaro Sway Settings'
 groups=('sway-manjaro')
 depends=(
     'manjaro-base-skel'
@@ -28,7 +28,7 @@ depends=(
     'jq'                      # json parsing and manipulation
     'calcurse'                # tui calendar application
     'lm_sensors'              # display sensor information
-    'manjaro-sway-wallpapers' # manjaro sway themed backgrounds
+    'manjaro-cdj-wallpapers'  # manjaro coderdojo themed backgrounds
     'wf-recorder'             # screen recording util
     'wl-clipboard'            # copy/paste utilities for wayland
     'nwg-wrapper'             # conky like onscreen information'
@@ -59,7 +59,7 @@ optdepends=(
     'wluma: adaptive brightness based on screen contents and ALS'
 )
 conflicts=('manjaro-desktop-settings' 'manjaro-sway-settings-git')
-provides=('manjaro-desktop-settings')
+provides=('manjaro-cdj-desktop-settings')
 source=(
     "$_pkgbase::git+${url}.git#branch=sway"
     "https://github.com/arcolinux/arcolinux-on-the-road/raw/cfbcc902b9520cc4ff73584dd80f34c54a158c75/root/usr/local/bin/skel"
