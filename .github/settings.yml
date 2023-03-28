@@ -3,3 +3,22 @@ _extends: manjaro-contrib/.github
 repository:
   homepage: __UPSTREAM__
 # you can extend settings using https://probot.github.io/apps/settings/
+
+name: Sync Fork
+
+on:
+  schedule:
+    - cron: '* 12 * * *' # every day
+  workflow_dispatch: # on button click
+
+jobs:
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: tgymnich/fork-sync@v1.8
+        with:
+          owner: manjaro-sway
+          base: master
+          head: master
